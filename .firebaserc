@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "courtspace-v2"
+  },
+  "targets": {
+    "courtspace-v2": {
+      "hosting": {
+        "desk": [
+          "desk-courtspace-v2"
+        ]
+      }
+    }
+  }
+}
