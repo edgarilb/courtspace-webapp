@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Courtspace for web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app will work similar to the app (courtspace desk). User can signing and be able to go the the dashboard where all courtspace desk functionalities will reside. 
+
 
 ## Available Scripts
 
