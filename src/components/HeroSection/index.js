@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import VideoFacilities from '../../videos/video2.mp4'
-import VideoPlayers from '../../videos/video5.mp4'
 import {
     HeroContainer, 
     HeroBg, 
@@ -31,12 +29,7 @@ const HeroSection = ({isPlayer, img}) => {
     return (
         <HeroContainer>
             <HeroBg>
-                {/* {
-                    isPlayer === true ?
-                    <VideoBg autoPlay loop muted src={VideoPlayers} type ='video5/mp4'/>
-                    :
-                    <VideoBg autoPlay loop muted src={VideoFacilities} type ='video2/mp4'/>
-                } */}
+                
                 {
                     isPlayer === true ?
                     <ImgWrap>
