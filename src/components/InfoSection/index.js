@@ -5,6 +5,7 @@ import {Button2} from '../ButtonElements2'
 import { 
     InfoContainer, 
     InfoWrapper, 
+    InfoWrapper2,
     InfoRow, 
     Column1, 
     Column2, 
@@ -16,6 +17,7 @@ import {
     ImgWrap, 
     Img,
 } from './InfoElements'
+
 
 const InfoSection = ({
     lightBg, 
@@ -31,41 +33,44 @@ const InfoSection = ({
     alt, 
     primary, 
     dark, 
-    dark2}) => {
+    dark2,
+    playersNavFlag}) => {
     return (
         <> 
             <InfoContainer lightBg={lightBg} id ={id}>
                 <InfoWrapper>
-                    <InfoRow imgStart = {imgStart}>   
-                        <Column1>
-                            <TextWrapper>
-                                <TopLine>{topLine}</TopLine>
-                                <Heading lightText = {lightText}>{headLine}</Heading>
-                                <Subtitle darkText = {darkText}>{description}</Subtitle>
-                                <BtnWrap>
-                                    <Button2 
-                                    to='/signup' 
-                                    primary={primary ? 1: 0} 
-                                    dark={dark ? 1 :0}
-                                    dark2 = {dark2 ? 1:0}
-                                    smooth={true}
-                                    duration={500}
-                                    spy={true}
-                                    exact={true}
-                                    offset={-80}
+                    <InfoWrapper2>
+                        <InfoRow imgStart = {imgStart}>   
+                            <Column1>
+                                <TextWrapper>
+                                    <TopLine>{topLine}</TopLine>
+                                    <Heading lightText = {lightText}>{headLine}</Heading>
+                                    <Subtitle darkText = {darkText}>{description}</Subtitle>
+                                    <BtnWrap>
+                                        <Button2 
+                                        to={playersNavFlag === true ? '/players' :'/signup'}
+                                        primary={primary ? 1: 0} 
+                                        dark={dark ? 1 :0}
+                                        dark2 = {dark2 ? 1:0}
+                                        smooth={true}
+                                        duration={500}
+                                        spy={true}
+                                        exact={true}
+                                        offset={-80}
 
-                                    >
-                                        {buttonLabel}
-                                    </Button2>
-                                </BtnWrap>
-                            </TextWrapper>
-                        </Column1>
-                        <Column2>
-                            <ImgWrap>
-                                <Img src ={img} alt={alt}/>
-                            </ImgWrap>
-                        </Column2>
-                    </InfoRow>
+                                        >
+                                            {buttonLabel}
+                                        </Button2>
+                                    </BtnWrap>
+                                </TextWrapper>
+                            </Column1>
+                            <Column2>
+                                <ImgWrap>
+                                    <Img src ={img} alt={alt}/>
+                                </ImgWrap>
+                            </Column2>
+                        </InfoRow>
+                    </InfoWrapper2>
                 </InfoWrapper>
 
             </InfoContainer>

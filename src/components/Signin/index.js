@@ -33,6 +33,7 @@ const Signin = () => {
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
             history.push('/dashboard')
+
         }catch{
             setError('Failed to log in')
         }

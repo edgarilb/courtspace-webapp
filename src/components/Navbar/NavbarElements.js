@@ -26,7 +26,8 @@ export const NavbarContainer = styled.div`
     z-index:1;
     width:100%;
     padding:0 24;
-    max-width: 1100px;
+    max-width: 2100px;
+    border:0px solid red;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -44,7 +45,7 @@ export const NavLogo = styled(LinkR)`
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 960px){
         display: block;
         position: absolute;
         top: 0;
@@ -58,15 +59,20 @@ export const MobileIcon = styled.div`
 
 export const NavMenu = styled.ul`
     display: flex;
+    flex:4;
     align-items: center;
+    justify-content:center;
     list-style: none;
     text-align: center;
     margin-right: -22px;
+    border:0px solid green;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 960px){
         display:none
     }
 `;
+
+
 
 
 export const NavItem = styled.li`
@@ -82,6 +88,7 @@ export const NavLinks = styled(LinkS)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
 
     &.active{
         border-bottom: 3px solid #01bf71;
@@ -106,9 +113,14 @@ export const NavLinks2 = styled(LinkR)`
 
 export const NavBtn = styled.nav`
     display: flex;
+    flex:1;
     align-items: center;
+    justify-content:center;
+    padding-right:10px;
+    padding-left:10px;
+    border: 0px solid blue;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 960px){
         display:none;
 
     }
@@ -118,7 +130,7 @@ export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
     background: #01bf71;
     white-space: nowrap;
-    padding: 10px 22px;
+    padding: 10px 18px;
     color: #010606;
     font-size: 16px;
     outline: none;
@@ -134,3 +146,7 @@ export const NavBtnLink = styled(LinkR)`
 
     }
 `;
+
+
+
+

@@ -14,7 +14,7 @@ export const InfoContainer  = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    /* height: 860px; */
     width:100%;
     max-width:1100px;
     margin-right: auto;
@@ -26,13 +26,14 @@ export const InfoWrapper = styled.div`
 export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     grid-template-areas: ${({imgStart}) => 
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
+    imgStart ? `'col2 col1' ` : `'col1 col2' `};
 
     @media screen and (max-width: 768px){
         grid-template-areas: ${({imgStart}) => 
-        imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+        imgStart ? `'col1' 'col2' ` : `'col1 col1' 'col2 col2' `};
     }
 `;
 
@@ -52,6 +53,16 @@ export const Column2 = styled.div`
     grid-area: col2;
     
 `;
+
+// export const Row1 = styled.div`
+//     /* display:flex; */
+//     /* justify-content:center;
+//     align-items:center; */
+//     margin-bottom: 15px;
+//     padding: 0 15px;
+//     grid-area: row1;
+    
+// `;
 
 export const TextWrapper = styled.div`
     max-width: 540px;

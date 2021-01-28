@@ -6,20 +6,22 @@ import InfoSection from '../components/InfoSection'
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/Data'
 import Services from '../components/Services'
 import Footer from '../components/Footer'
-
+import img from '../images/svg-7.svg'
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false) 
 
     const toggle = ()=>{
         setIsOpen(!isOpen)
     }
+    
+    const isPlayer = false
     return (
         <>
             {/* <Sidebar /> */}
             <Sidebar isOpen = {isOpen} toggle ={toggle}/>
             <Navbar toggle = {toggle}/>
             {/* <Navbar /> */}
-            <HeroSection/>
+            <HeroSection isPlayer={isPlayer} img={img} />
             <InfoSection {...homeObjOne}/>
             <InfoSection {...homeObjTwo}/>
             <Services/>

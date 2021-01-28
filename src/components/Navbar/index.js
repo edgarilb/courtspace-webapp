@@ -1,10 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink, NavLinks2} from './NavbarElements'
+import {
+    Nav, 
+    NavbarContainer, 
+    NavLogo, MobileIcon, 
+    NavMenu, 
+    NavItem, 
+    NavLinks, 
+    NavBtn, 
+    NavBtn2,
+    NavBtnLink, 
+    NavLinks2,
+    NavBtnLink2,
+    NavSelect
+} from './NavbarElements'
 import {animateScroll as scroll} from 'react-scroll'
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle, isPlayer}) => {
     const [scrollNav, setScrollNav] = useState(false)
     
     const changeNav = ()=>{
@@ -31,9 +44,18 @@ const Navbar = ({toggle}) => {
                     <NavLogo onClick={toggleHome} to='/'>
                     Courtspace
                     </NavLogo>
+                    {
+                    isPlayer == true ?
+                    null
+                    :
                     <MobileIcon onClick = {toggle}>
                         <FaBars/>
                     </MobileIcon>
+}
+                    {
+                    isPlayer == true ?
+                    null
+                    :
                     <NavMenu>
                         <NavItem>
                             <NavLinks 
@@ -43,7 +65,8 @@ const Navbar = ({toggle}) => {
                             spy={true}
                             exact='true'
                             offset={-80}
-                            >Chats</NavLinks>
+                            >Chats
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks 
@@ -54,7 +77,8 @@ const Navbar = ({toggle}) => {
                             exact='true'
                             offset={-80}
                             
-                            >Rental Requests</NavLinks>
+                            >Rental Requests
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks 
@@ -65,7 +89,8 @@ const Navbar = ({toggle}) => {
                             exact='true'
                             offset={-80}
                             
-                            >All Services</NavLinks>
+                            >All Services
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks2 
@@ -75,12 +100,22 @@ const Navbar = ({toggle}) => {
                             spy={true}
                             exact='true'
                             offset={-80}
-                            >Sign up</NavLinks2>
+                            >Sign up
+                            </NavLinks2>
                         </NavItem>
+                       
                     </NavMenu>
+                    }
+                    
+                    {isPlayer === true ?
+                     null
+                    :
                     <NavBtn>
                         <NavBtnLink to='/signin'>Sign In</NavBtnLink>
                     </NavBtn>
+                    }
+                   
+                
                 </NavbarContainer>
             </Nav>
         </IconContext.Provider>

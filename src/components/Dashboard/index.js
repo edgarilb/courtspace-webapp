@@ -13,14 +13,18 @@ import {
     Img,
     Text,
     TextEmail,
+    // Row1
 } from './DashboardElements'
 import {useAuth} from '../contexts/AuthContext'
 import pic from '../../images/svg-7.svg'
+import {db} from '../../firebase'
 
 
 const Dashboard = () => {
     const [error, setError] = useState('')
     const {currentUser} = useAuth()
+   
+    
     
     return (
         <>
@@ -46,6 +50,13 @@ const Dashboard = () => {
                                 <Img src ={pic} alt={'dash'}/>
                             </ImgWrap>
                         </Column2>
+                        {/* <Row1>
+                            <TextWrapper>
+                               
+                                <TopLine>Heello Desk</TopLine>
+                              
+                            </TextWrapper>
+                        </Row1> */}
                     </InfoRow>
                 </InfoWrapper>
 

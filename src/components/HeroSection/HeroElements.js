@@ -32,6 +32,34 @@ export const VideoBg = styled.video`
     -o-object-fit: cover;
     object-fit: cover;
     background: #232a34;
+
+    @media screen and (max-width: 768px){
+        display:none;
+    }
+  
+`;
+
+export const ImgWrap = styled.div`
+    /* max-width: 555px; */
+    width:100%;
+    height: 100%;
+    /* padding-bottom:100px; */
+    @media screen and (max-width: 768px){
+        /* padding-left:100px; */
+    }
+`;
+
+export const Img = styled.img`
+        /* display:block; */
+ /* @media screen and (max-width: 768px){ */
+        width:100%;
+        height:100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        background: #232a34;
+        padding-left:100px;
+    /* } */
+   
 `;
 
 export const HeroContent = styled.div`
@@ -51,6 +79,7 @@ export const HeroH1 = styled.h1`
     color: #fff;
     font-size: 48px;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 
     @media screen and (max-width: 768px){
         font-size:  40px;
@@ -69,6 +98,7 @@ export const HeroP = styled.p`
     font-size: 24px;
     text-align: center;
     max-width: 600px;
+    text-shadow: 2px 2px 4px #000000;
 
     @media screen and (max-width: 768px){
         font-size:  24x;
@@ -137,5 +167,50 @@ export const Button2 = styled(LinkR)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: ${({primary})=>(primary ? '#fff': '#01BF71')}
+    }
+`;
+
+export const NavSelect = styled.div`
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content:center;
+    border:0px solid black;
+    /* padding-right:0px; */
+`
+
+export const NavBtn2 = styled.nav`
+    display: flex;
+    align-items: center;
+    padding-right:20px;
+    padding-left:20px;
+    
+
+    @media screen and (max-width: 960px){
+        /* display:none; */
+
+    }
+`;
+
+export const NavBtnLink2 = styled(LinkR)`
+    border-radius: 50px;
+    background: ${({isPlayer}) => (isPlayer === false ? '#6c5ce7':'#fff')};
+    /* background: #6c5ce7; */
+    white-space: nowrap;
+    padding: 10px 18px;
+    color: ${({isPlayer}) => (isPlayer === false ? '#fff' :  '#000')};
+    /* color: #010606; */
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
     }
 `;
