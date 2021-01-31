@@ -41,10 +41,13 @@ export const VideoBg = styled.video`
 
 export const ImgWrap = styled.div`
     /* max-width: 555px; */
+    position:relative;
     width:100%;
-    height: 100%;
+    height: 1000px;
     /* padding-bottom:100px; */
     @media screen and (max-width: 768px){
+        width:100%;
+        height: 700px;
         /* padding-left:100px; */
     }
 `;
@@ -194,23 +197,24 @@ export const NavBtn2 = styled.nav`
 
 export const NavBtnLink2 = styled(LinkR)`
     border-radius: 50px;
-    background: ${({isPlayer}) => (isPlayer === false ? '#6c5ce7':'#fff')};
+    background: ${({isPlayer}) => (isPlayer === false ? '#6c5ce7':'#636e72')};
+    border:3px solid #fff;
     /* background: #6c5ce7; */
     white-space: nowrap;
     padding: 10px 18px;
-    color: ${({isPlayer}) => (isPlayer === false ? '#fff' :  '#000')};
+    color: ${({isPlayer}) => (isPlayer === false ? '#fff' :  '#fff')};
     /* color: #010606; */
     font-size: 16px;
-    outline: none;
-    border: none;
+    /* outline: none; */
+    /* border: none; */
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 
-    &:hover{
+    /* &:hover{
         transform: scale(1.2);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
 
-    }
+    } */
 `;

@@ -7,6 +7,7 @@ import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/
 import Services from '../components/Services'
 import Footer from '../components/Footer'
 import img from '../images/svg-7.svg'
+
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false) 
 
@@ -21,7 +22,7 @@ const Home = () => {
             <Sidebar isOpen = {isOpen} toggle ={toggle}/>
             <Navbar toggle = {toggle}/>
             {/* <Navbar /> */}
-            <HeroSection isPlayer={isPlayer} img={img} />
+            <HeroSection isPlayer={isPlayer} img={img} downloadImg={null} />
             <InfoSection {...homeObjOne}/>
             <InfoSection {...homeObjTwo}/>
             <Services/>

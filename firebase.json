@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target":"desk",
+    "site":"courtspacedesk",
     "public": "build",
     "ignore": [
       "firebase.json",

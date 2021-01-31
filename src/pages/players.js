@@ -6,6 +6,7 @@ import HeroSection from '../components/HeroSection'
 import Footer from '../components/Footer'
 import { homeObjPlayersOne, homeObjPlayersTwo, homeObjPlayersThree} from '../components/InfoSection/Data'
 import img from '../images/svg-2.svg'
+import downloadImg from '../images/download.png'
 
 const PlayersPage = () => {
     const [isOpen, setIsOpen] = useState(false) 
@@ -18,7 +19,7 @@ const PlayersPage = () => {
         <>
             <Sidebar isOpen = {isOpen} toggle ={toggle}/>
             <Navbar isPlayer={isPlayer} toggle = {toggle}/>
-            <HeroSection isPlayer={isPlayer} img={img}/>
+            <HeroSection isPlayer={isPlayer} img={img} downloadImg={downloadImg}/>
             <InfoSection {...homeObjPlayersOne}/>
             <InfoSection {...homeObjPlayersTwo}/>
             <InfoSection {...homeObjPlayersThree}/>

@@ -37,9 +37,12 @@ const HeroSection = ({isPlayer, img}) => {
                     </ImgWrap>
                     
                     :
-                    <ImgWrap>
-                        <Img src ={img} alt={'Car'}/>
-                    </ImgWrap>
+                    // <div style={{display:'flex', flex:'1', border:'4px solid red'}}>
+                        <ImgWrap>
+                            <Img src ={img} alt={'Car'}/>
+                        </ImgWrap>
+                    // </div>
+                    
                 }
                
             </HeroBg>
@@ -64,15 +67,17 @@ const HeroSection = ({isPlayer, img}) => {
                 <HeroP>
                 {
                     isPlayer === true ?
-                    "Send confirmation and rental request! Pay sports facilities through the app!"
+                    "Reservations at sports facilities, chats, payments, rewards and more"
                     :
-                    "Start 60 days Free trial"
+                    "Connect with customers via chat, receive rental requests, charge no-show fees and receive payments"
                 }
                 
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button2 
-                    to={isPlayer === true ?  '/players' : 'signup' }
+                    to={isPlayer === true ?  '/download' : 'signup' }
+                    // onClick ={()=> isPlayer === true ? window.open('https://www.google.com/search?sxsrf=ALeKk02nDQqCYLTXdc_CmedhDWjbJGNX2Q%3A1611873800915&ei=CD4TYPmlN5TVtAb0tKGIBg&q=courtspace+app+stores&oq=courtspace+app+stores&gs_lcp=CgZwc3ktYWIQAzoECCMQJ1DiDVjiDWDDD2gAcAB4AIABa4gBsQGSAQMxLjGYAQCgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab&ved=0ahUKEwj5yc3q2b_uAhWUKs0KHXRaCGEQ4dUDCA0&uact=5'):null}
+                    
                     onMouseEnter={onHover} 
                     onMouseLeave={onHover}
                     primary = 'true'
@@ -80,9 +85,9 @@ const HeroSection = ({isPlayer, img}) => {
                     >
                         {
                             isPlayer === true ?
-                            "Basketball, Soccer and Tennis"
+                            "Download Courtspace now!"
                             :
-                            'Get started' 
+                            "Start 30 Days Free Trial" 
                         }
                         {isPlayer === false ?
                          hover ? <ArrowForward/> : <ArrowRight/>
