@@ -13,6 +13,8 @@ import {
     Img,
     Text,
     TextEmail,
+    NavBtn,
+    NavBtnLink
     // Row1
 } from './DashboardElements'
 import {useAuth} from '../contexts/AuthContext'
@@ -38,10 +40,13 @@ const Dashboard = () => {
                                 <TopLine>Courtspace Desk</TopLine>
                                 <Heading lightText = {true}>Thanks for creating an account</Heading>
                                 <Subtitle darkText = {false}>
-                                    A member of the Courtspace team will soon reach out to you in order to schedule a visit to your sport facility. 
-                                    If you have any questions you can send us an email to cs@courtspaceapp.com
+                                    Your account has been created but it's not activated yet. A member of the Courtspace team will soon reach out to you. To expedite the process, you can text or call (405)-638-6306. 
+                                    If you have any questions you can also send us an email to cs@courtspaceapp.com
                                 </Subtitle>
                             </TextWrapper>
+                            {/* <NavBtn>
+                                <NavBtnLink to={'/main-dashboard'} >Go to Dashboard</NavBtnLink>
+                            </NavBtn> */}
                         </Column1>
                         <Column2>
                             <TextEmail> {currentUser.email} </TextEmail>

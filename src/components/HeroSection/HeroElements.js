@@ -44,7 +44,7 @@ export const ImgWrap = styled.div`
     position:relative;
     width:100%;
     height: 1000px;
-    /* padding-bottom:100px; */
+    padding-top:0px;
     @media screen and (max-width: 768px){
         width:100%;
         height: 700px;
@@ -61,6 +61,8 @@ export const Img = styled.img`
         object-fit: cover;
         background: #232a34;
         padding-left:100px;
+        padding-top:0px;
+        padding-right:0px;
     /* } */
    
 `;
@@ -101,7 +103,10 @@ export const HeroP = styled.p`
     font-size: 24px;
     text-align: center;
     max-width: 600px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 4px 4px 8px #000000;
+    background: #232a34;
+
+    /* '#01bf71':'#010606' */
 
     @media screen and (max-width: 768px){
         font-size:  24x;
@@ -179,6 +184,7 @@ export const NavSelect = styled.div`
     align-items: center;
     justify-content:center;
     border:0px solid black;
+    flex-direction:column;
     /* padding-right:0px; */
 `
 
@@ -187,6 +193,7 @@ export const NavBtn2 = styled.nav`
     align-items: center;
     padding-right:20px;
     padding-left:20px;
+    margin-bottom:20px;
     
 
     @media screen and (max-width: 960px){

@@ -24,6 +24,7 @@ export const InfoWrapper = styled.div`
     justify-content: center;
 `;
 
+
 export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
