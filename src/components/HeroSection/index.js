@@ -14,7 +14,8 @@ import {
     NavBtn2,
     NavBtnLink2,
     Img,
-    ImgWrap
+    ImgWrap,
+    HeroPWrap
 
 } from './HeroElements'
 // import {Button} from '../ButtonElement'
@@ -47,33 +48,36 @@ const HeroSection = ({isPlayer, img}) => {
                
             </HeroBg>
             <HeroContent>
-            <NavSelect>
-                <NavBtn2 light={true}>
-                    <NavBtnLink2 to='/' active={true} isPlayer={isPlayer}>Join as Event Organizer</NavBtnLink2>
-                </NavBtn2>
-                <NavBtn2>
-                    <NavBtnLink2 to='/players' active={false} isPlayer={!isPlayer}>Join as a Player</NavBtnLink2>
-                </NavBtn2>
-            </NavSelect>
+           
                 <HeroH1>
                 {
                     isPlayer === true ?
-                    '\uD83D\uDD25' + " Find pickup games & Classes near you "+ '\uD83D\uDCAA' 
+                    '\uD83D\uDD25' + " Find Pickup Games & Classes Near You "+ '\uD83D\uDCAA' 
                     :
-                    '\uD83D\uDD25' + " Make money organizing sport events " + "\ud83d\ude0e" 
+                    " Organize Sports Events and Get Paid " + "\ud83d\ude0e" 
                 }
                 
                 </HeroH1>
-                <HeroP>
-                {
-                    isPlayer === true ?
-                    "Join sport events and connect with other players like you. We offer Soccer, Tennis and Basketball Pickup Games, Classes and more"
-                    :
-                    // "Connect with customers via chat, receive rental requests, charge no-show fees and receive payments"
-                    "Create sport events such as: Officiated Games, Tennis Classes, Soccer and Basketball Pickup Games"
-                }
-                
-                </HeroP>
+                {/* <HeroPWrap> */}
+                    <HeroP>
+                    {
+                        isPlayer === true ?
+                        "Join sports events and connect with other players like you. We offer Soccer, Tennis and Basketball Pickup Games, Classes and more"
+                        :
+                        // "Connect with customers via chat, receive rental requests, charge no-show fees and receive payments"
+                        "Create sports events such as: Officiated Games, Tennis Classes, Soccer and Basketball Pickup Games"
+                    }
+                    
+                    </HeroP>
+                {/* </HeroPWrap> */}
+                <NavSelect>
+                    <NavBtn2 light={true}>
+                        <NavBtnLink2 to='/' active={true} isPlayer={isPlayer}>Organizers</NavBtnLink2>
+                    </NavBtn2>
+                    <NavBtn2>
+                        <NavBtnLink2 to='/players' active={false} isPlayer={!isPlayer}>Players</NavBtnLink2>
+                    </NavBtn2>
+                </NavSelect>
                 <HeroBtnWrapper>
                     <Button2 
                     to={isPlayer === true ?  '/download' : 'signup' }
@@ -86,9 +90,9 @@ const HeroSection = ({isPlayer, img}) => {
                     >
                         {
                             isPlayer === true ?
-                            "Download Courtspace now!"
+                            "Download Now >"
                             :
-                            "Start 30 Days Free Trial" 
+                            "Get Started" 
                         }
                         {isPlayer === false ?
                          hover ? <ArrowForward/> : <ArrowRight/>

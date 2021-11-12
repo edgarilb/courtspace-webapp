@@ -6,7 +6,7 @@ import InfoSection from '../components/InfoSection'
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/Data'
 import Services from '../components/Services'
 import Footer from '../components/Footer'
-import img from '../images/svg-7.svg'
+import img from '../images/mozaic_19.png'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false) 

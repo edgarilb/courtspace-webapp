@@ -42,12 +42,16 @@ export const VideoBg = styled.video`
 export const ImgWrap = styled.div`
     /* max-width: 555px; */
     position:relative;
+    /* background: #232a34; */
+    background:#6654E8;
     width:100%;
     height: 1000px;
     padding-top:0px;
+    padding-bottom:200px;
     @media screen and (max-width: 768px){
         width:100%;
         height: 700px;
+        padding-bottom:200px;
         /* padding-left:100px; */
     }
 `;
@@ -60,7 +64,7 @@ export const Img = styled.img`
         -o-object-fit: cover;
         object-fit: cover;
         background: #232a34;
-        padding-left:100px;
+        padding-left:0px;
         padding-top:0px;
         padding-right:0px;
     /* } */
@@ -80,14 +84,20 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-    margin-top:24px;
+    margin-top:0px;
     color: #fff;
     font-size: 48px;
     text-align: center;
-    text-shadow: 2px 2px 4px #000000;
+    /* text-shadow: 2px 2px 4px #000000; */
+
+    text-shadow: 4px 4px 8px #000000;
+    /* background: #232a34; */
+    padding:10px;
+    background-color:rgba(0, 0, 0, 0.5);
 
     @media screen and (max-width: 768px){
         font-size:  40px;
+        background-color:rgba(0, 0, 0, 0.5);
     }
 
     @media screen and (max-width: 480px){
@@ -105,6 +115,40 @@ export const HeroP = styled.p`
     max-width: 600px;
     text-shadow: 4px 4px 8px #000000;
     background: #232a34;
+    font-weight:bold;
+    padding:10px;
+    z-index:10;
+    background-color:rgba(0, 0, 0, 0.5);
+    /* opacity: 0.5; */
+
+    /* '#01bf71':'#010606' */
+
+    @media screen and (max-width: 768px){
+        font-size:  24x;
+        background: #232a34;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (max-width: 480px){
+        font-size:  18px;
+        background: #232a34;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+`;
+
+
+export const HeroPWrap = styled.div`
+    margin-top: 24px;
+    margin-bottom:24px;
+    color: #fff;
+    /* font-size: 24px; */
+    /* text-align: center; */
+    max-width: 600px;
+    /* text-shadow: 4px 4px 8px #000000; */
+    background: #232a34;
+    /* font-weight:bold; */
+    padding:10px;
+    opacity: 0.5;
 
     /* '#01bf71':'#010606' */
 
@@ -118,7 +162,7 @@ export const HeroP = styled.p`
 `;
 
 export const HeroBtnWrapper = styled.div`
-    margin-top: 32 px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +228,7 @@ export const NavSelect = styled.div`
     align-items: center;
     justify-content:center;
     border:0px solid black;
-    flex-direction:column;
+    flex-direction:row;
     /* padding-right:0px; */
 `
 
@@ -204,7 +248,7 @@ export const NavBtn2 = styled.nav`
 
 export const NavBtnLink2 = styled(LinkR)`
     border-radius: 50px;
-    background: ${({isPlayer}) => (isPlayer === false ? '#6c5ce7':'#636e72')};
+    background: ${({isPlayer}) => (isPlayer === false ? '#2d3436':'#636e72')};
     border:3px solid #fff;
     /* background: #6c5ce7; */
     white-space: nowrap;

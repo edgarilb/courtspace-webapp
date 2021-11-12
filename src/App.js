@@ -10,6 +10,7 @@ import { AuthProvider } from './components/contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import ForgotPassword from './components/ForgotPassword';
 import MainDashBoardPage from './pages/mainDashBoard'
+import PrivacyPolicyPage from './pages/privacyPolicy';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
           <Route path = '/download' component ={DownloadPage} exact/>
           <Route path = '/forgot-password' component={ForgotPassword} exact/>
           <Route path = '/main-dashboard' component={MainDashBoardPage} exact/>
+          <Route path = '/privacyPolicy' component ={PrivacyPolicyPage} exact/>
           <PrivateRoute path = '/dashboard' component={DashboardPage} exact/>
+          
         </Switch>
       </Router>
     </AuthProvider>
